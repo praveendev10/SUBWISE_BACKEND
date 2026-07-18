@@ -13,7 +13,7 @@ export interface IUser {
   country: string;
 }
 
-export interface IRegisterUser extends IUser {}
+export interface IRegisterUser extends Omit<IUser, "createdAt" | "updatedAt"> {}
 
 export interface ILoginUser {
   identifier: string;
