@@ -15,7 +15,7 @@ const userSchema = new Schema<IUser>(
     lastName: nameSchema,
     userName: {
       type: String,
-      required: [true, "Uesrname is missing"],
+      required: [true, "Username is missing"],
       trim: true,
       unique: true,
       minLength: [5, "Minimum 5 character"],
@@ -33,7 +33,6 @@ const userSchema = new Schema<IUser>(
       type: String,
       required: true,
       minLength: [8, "Minimum 8 character"],
-      maxLength: [15, "Maximum 15 character"],
       trim: true,
     },
     age: {
